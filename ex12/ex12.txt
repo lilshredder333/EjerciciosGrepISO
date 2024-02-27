@@ -1,0 +1,58 @@
+
+# [Recordatorio]
+# -w sirve para especificar que se tienen que buscar únicamente palabras
+# -o sirve para mostrar únicamente la parte de la linea que coincide
+# -i sirve para indicar que dan igual las mayúsculas y minúsculas
+# En los ejercicios que pida extraer palabras hay que usar la combinación -wo
+
+
+1) Muestra las lineas que contienen alguno de estos carácteres:
+        character1: q
+        character2: x
+        character3: z
+
+
+2) Muestra las lineas que contienen alguno de estos carácteres:
+        character1: c
+        character2: f
+    a continuación cualquier carácter
+    seguido del character  : t
+
+
+3) Muestra todas las palabras que empiecen por: s
+    sin importar mayúsculas
+    solo letras
+    mínimo 2 letras
+    palabras, no cadenas
+
+
+4) Extrae las palabras que son combinaciones de estos carácteres
+        character1: a
+        character2: c
+        character3: e
+        character4: r
+        character5: s
+    sin importar mayúsculas
+    solo letras
+    palabras, no cadenas
+
+
+5) Extra todos los números que no son parte de una palabra
+
+
+6) Extra todos los números que no son parte de una palabra con la condición que:
+    30 <= número <= 70
+
+
+
+7) Extrae las palabras con solo consonantes
+    sin importar mayúsculas
+    solo letras
+    mínimo 2 caracteres
+    palabras, no cadenas
+
+
+8) Extrae todas las secuencias de cadenas que consisten en combinaciones de: -
+    rodeadas de 0 o más combinaciones de letras 
+
+    Ejemplo: far-fetched

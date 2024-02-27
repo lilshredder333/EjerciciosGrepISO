@@ -1,0 +1,25 @@
+Nota: usa el comando grep para buscar todos los ficheros a la vez
+
+1) Obtén las lineas que tienen la palabra en si (no es parte de otra): do
+
+Ejemplo:
+
+do you need --> match 
+sudo rm rf  --> no match
+
+Solucion: grep -w 'do' *
+
+2) Muestra las lineas que tienen la frase (sin nada extra al rededor): Hello World
+
+Solucion: grep -w '^Hello World$' *
+
+3) Muestra las lineas que tienen alguna de las dos palabras:
+        Word1: He
+        Word2: far
+
+Solucion: grep -we 'He' -we 'far' * 
+
+4) Muestra las lineas que tienen la palabra: you
+    pero no la palabra: How  (sin importar mayúscula/minúscula)
+
+Solucion: grep -wvi 'How' * | grep -w 'you' 

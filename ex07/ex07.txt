@@ -1,0 +1,35 @@
+Note: Usa como entrada todos los ficheros en cualquier subdirectorio a partir de ex07
+Nota: Usa las opciones: --exclude-dir, --include y --exclude
+Nota: También son necesarias las opciones -r y -l
+
+1) Obtén todas las lineas que contengan: you
+
+Solucion: grep -r 'you' 
+
+2) Muestra solo los nombres de los ficheros que tengan la cadena: Hello
+    únicamente de los ficheros acabados en  .txt 
+
+Solucion: grep -lr 'Hello' --include=*.txt
+
+3) Muestra solo los nombres de los ficheros que tengan la cadena: Hello
+    únicmaente en los ficheros que NO acaben en .txt 
+
+Solucion: grep -lr 'Hello' --exclude=*.txt
+
+4) Muestra el nombre de los ficheros que tengan la cadena: are
+    Excepto lo de los ficheros del directorio: progs
+
+Solucion: grep -lr 'are' --exclude-dir=progs
+
+5) Muestra solo el nombre de los ficheros que tengan la cadena: are
+    excluye la búsqueda en los directorios
+            dir1: progs
+            dir2: msg
+
+Solucion: grep -lr 'are' --exclude-dir=progs --exclude-dir=msg
+
+6) Muestra solo el nombre de los ficheros que tengan la cadena: are
+    usa únicamente los ficheros de los subdirectorios, no del directorio actual
+    pista: este es el ejercicio más difícil
+
+Solucion: grep -l 'are' --exclude-dir= */*  

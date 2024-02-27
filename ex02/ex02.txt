@@ -1,0 +1,19 @@
+1) Obtén las lineas (independiente de mayúsculas/minúsculas) con la cadena: no 
+Solucion: grep -i 'no' sample.txt
+
+2) Obtén las lineas que no contengan la cadena: o
+# Pista: -v
+Solucion: grep -v 'o' sample.txt
+
+3) Obtén las lineas y el número de linea que contengan la cadena: it
+# Pista: -n
+Solucion: grep -n 'it' sample.txt
+
+4) Obtén la cantidad de lineas que contienen la cadena: a
+# Pista: -c
+Solucion: grep -c 'a' sample.txt
+
+5) Obtén las primeras dos lineas que contengan la cadena: do
+# Pista: -m
+Solucion: grep -m 2 'do' sample.txt
+

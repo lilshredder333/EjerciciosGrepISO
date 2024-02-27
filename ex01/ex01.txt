@@ -1,0 +1,9 @@
+1) Obtén las lineas con la cadena: day
+Solucion: grep 'day' sample.txt
+
+2) Obtén las lineas con la cadena: it
+Solucion: grep 'it' sample.txt
+
+3) Obtén las lineas con la cadena: do you
+Solucion: grep -w 'do' sample.txt | grep -w 'you'
+

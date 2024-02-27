@@ -1,0 +1,21 @@
+Nota: -A, -C, -B, --group-separator, --no-group-separator
+
+
+1) Obtén las lineas (y las 3 siguientes) que contienen la cadena: you
+
+Solucion: grep -h 'you' -A3 sample.txt
+
+2) Obtén las lineas (y las 2 anteriores) que contienen la cadena: is
+
+Solucion: grep 'is' -B2 sample.txt
+
+3) Obtén las lineas (una anterior y otra posterior) que contienen la cadena: Not
+
+Solucion: grep 'Not' -B1 -A1 sample.txt
+
+4) Obtén las lineas (una siguiente y 4 anteriores) que contienen la cadena: Not
+
+Solucion: grep 'Not' -B4 -A1 sample.txt
+
+
+

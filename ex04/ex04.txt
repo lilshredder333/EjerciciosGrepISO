@@ -1,0 +1,22 @@
+Nota: usa el comando grep para buscar todos los ficheros a la vez
+Nota: opciones -L -l -h
+
+1) Muestra el nombre de los ficheros que contienen la cadena: are
+
+Solucion: grep -l 'are' * 
+
+2) Muestra el nombre de los ficheros que no contienen la cadena: two
+
+Solucion: grep -L 'two' * 
+
+3) Muestra todas las lineas que contienen la cadena: are
+
+Solucion: grep 'are' *
+
+4) Muestra como máximo dos lineas de cualquier fichero que contengan la cadena: a
+
+Solucion: grep -m 2 -i 'a' *
+
+5) Muestra todas las lineas que contienen la cadena sin mostrar el nombre del fichero al principio: to
+
+Solucion: grep 'to' -h *
