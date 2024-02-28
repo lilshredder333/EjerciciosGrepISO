@@ -11,6 +11,7 @@
         character2: x
         character3: z
 
+Solucion: egrep 'q|x|z' sample_words.txt
 
 2) Muestra las lineas que contienen alguno de estos carácteres:
         character1: c
@@ -18,6 +19,7 @@
     a continuación cualquier carácter
     seguido del character  : t
 
+Solucion: egrep '[cf].t' sample_words.txt
 
 3) Muestra todas las palabras que empiecen por: s
     sin importar mayúsculas
@@ -25,6 +27,7 @@
     mínimo 2 letras
     palabras, no cadenas
 
+Solucion: egrep -i -wo 's[a-z]{2,}' sample_words.txt 
 
 4) Extrae las palabras que son combinaciones de estos carácteres
         character1: a
@@ -36,13 +39,16 @@
     solo letras
     palabras, no cadenas
 
+Solucion: egrep -i -wo '\b[acers]+\b' sample_words.txt
 
 5) Extra todos los números que no son parte de una palabra
 
+Solucion: egrep -wo '[0-9]+' sample_words.txt
 
-6) Extra todos los números que no son parte de una palabra con la condición que:
+6) Extrae todos los números que no son parte de una palabra con la condición que:
     30 <= número <= 70
 
+Solucion: egrep -wo '[3-6][0-9]|70' sample_words.txt 
 
 
 7) Extrae las palabras con solo consonantes
@@ -51,8 +57,11 @@
     mínimo 2 caracteres
     palabras, no cadenas
 
+Solucion: egrep -woi '[a-z]{2,}' sample_words.txt | egrep -vi '[aeiou]'
 
 8) Extrae todas las secuencias de cadenas que consisten en combinaciones de: -
     rodeadas de 0 o más combinaciones de letras 
 
     Ejemplo: far-fetched
+
+Solucion: egrep -oi '[a-z]*-[a-z]*' sample_words.txt
